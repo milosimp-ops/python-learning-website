@@ -1,0 +1,110 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Python Path | Learn Python</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header class="topbar">
+        <a class="brand" href="#" id="homeLink">🐍 Python Path</a>
+        <span class="save-status" id="saveStatus">Progress saves automatically</span>
+    </header>
+
+    <main class="container">
+        <section id="dashboard">
+            <div class="hero">
+                <p class="eyebrow">YOUR PERSONAL LEARNING SPACE</p>
+                <h1>Learn Python,<br><span>one step at a time.</span></h1>
+                <p>Small lessons. Simple examples. Practice that helps you remember.</p>
+
+                <div class="progress-summary">
+                    <div>
+                        <strong id="progressPercent">0%</strong>
+                        <span>course completed</span>
+                    </div>
+                    <div class="progress-track">
+                        <div id="progressBar"></div>
+                    </div>
+                    <p id="progressText">0 of 6 modules completed</p>
+                </div>
+                <button id="continueButton">Start learning →</button>
+            </div>
+
+            <h2 class="section-title">Your learning path</h2>
+            <div id="moduleList" class="module-grid"></div>
+
+            <div class="note">
+                💡 <strong>Learning tip:</strong> Try writing each example
+                yourself instead of only reading it.
+            </div>
+        </section>
+
+        <section id="lessonPage" class="hidden">
+            <button class="back-link" id="dashboardButton">← Dashboard</button>
+
+            <div class="lesson-heading">
+                <p class="eyebrow" id="lessonNumber"></p>
+                <h1 id="lessonTitle"></h1>
+                <p id="lessonDescription"></p>
+            </div>
+
+            <article class="lesson-card">
+                <div id="lessonContent"></div>
+
+                <div class="lesson-actions">
+                    <button class="secondary-button" id="flashcardButton">
+                        Study flashcards
+                    </button>
+                    <button id="quizButton">Take the module quiz →</button>
+                </div>
+            </article>
+        </section>
+
+        <section id="quizPage" class="hidden">
+            <button class="back-link" id="lessonBackButton">← Back to lesson</button>
+
+            <div class="lesson-card">
+                <p class="eyebrow">KNOWLEDGE CHECK</p>
+                <h1 id="quizTitle">Quick quiz</h1>
+                <p id="quizCounter"></p>
+                <h2 id="quizQuestion"></h2>
+                <div id="quizOptions" class="option-list"></div>
+                <p id="quizFeedback" aria-live="polite"></p>
+                <button id="nextQuestionButton" disabled>Check answer</button>
+            </div>
+        </section>
+
+        <section id="flashcardPage" class="hidden">
+            <button class="back-link" id="flashcardBackButton">← Back to lesson</button>
+
+            <div class="lesson-card flashcard-area">
+                <p class="eyebrow">ACTIVE RECALL</p>
+                <h1>Flashcard practice</h1>
+                <p id="cardCounter"></p>
+
+                <button id="flashcard" class="flashcard" aria-label="Reveal flashcard answer">
+                    <span id="cardLabel">QUESTION</span>
+                    <strong id="cardText">Click to begin</strong>
+                    <small id="cardHint">Click the card to reveal the answer</small>
+                </button>
+
+                <div class="flashcard-actions">
+                    <button class="secondary-button" id="unknownCardButton">
+                        Practise again
+                    </button>
+                    <button id="knownCardButton">I know this ✓</button>
+                </div>
+                <p id="cardFeedback" aria-live="polite"></p>
+            </div>
+        </section>
+
+        <footer>
+            <p>Made for curious minds 💚 Keep practising, keep growing.</p>
+        </footer>
+    </main>
+</body>
+</html>
